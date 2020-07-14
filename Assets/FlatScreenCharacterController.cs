@@ -51,17 +51,7 @@ public class FlatScreenCharacterController : MonoBehaviour
 
         if(CurrentHeldObject != null)
         {
-            var currentPosition = CurrentHeldObject.transform.position;
-            var desiredPosition = fakeChild.transform.position;
-            Vector3 direction = desiredPosition - currentPosition;
-            Ray Ray = new Ray(currentPosition, direction);
-            RaycastHit Hit;
-            if (!Physics.Raycast(Ray, out Hit, direction.magnitude))
-                CurrentHeldObject.GetComponent<Rigidbody>().MovePosition(desiredPosition);
-            else
-                CurrentHeldObject.GetComponent<Rigidbody>().MovePosition(Hit.point);
-
-            //CurrentHeldObject.GetComponent<Rigidbody>().MovePosition(fakeChild.transform.position);
+            CurrentHeldObject.GetComponent<Rigidbody>().MovePosition( fakeChild.transform.position);
             CurrentHeldObject.GetComponent<Rigidbody>().MoveRotation(fakeChild.transform.rotation);
             //CurrentHeldObject.transform.position = myCamera.transform.TransformPoint(transform.localPosition);
         }
@@ -114,14 +104,14 @@ public class FlatScreenCharacterController : MonoBehaviour
                 fakeChild.transform.position = CurrentSlectedObject.transform.position;
                 fakeChild.transform.rotation = CurrentSlectedObject.transform.rotation;
                 CurrentHeldObject = CurrentSlectedObject;
-                //CurrentHeldObject.GetComponent<Rigidbody>().useGravity = false;
+                CurrentHeldObject.GetComponent<Rigidbody>().useGravity = false;
                 //offset = CurrentHeldObject.position - myCamera.transform.position;
             }
         }
     }
     void UnGrab()
     {
-        //CurrentHeldObject.GetComponent<Rigidbody>().useGravity = true;
+        CurrentHeldObject.GetComponent<Rigidbody>().useGravity = true;
         CurrentHeldObject = null;
     }
 
