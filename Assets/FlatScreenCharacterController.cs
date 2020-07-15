@@ -51,6 +51,26 @@ public class FlatScreenCharacterController : MonoBehaviour
 
         if(CurrentHeldObject != null)
         {
+        //    Vector3 target = fakeChild.transform.position;
+        //    CurrentHeldObject.GetComponent<Rigidbody>().velocity = target;
+            //RaycastHit hitInfo;
+            //if (Physics.Linecast(CurrentHeldObject.position, target, out hitInfo))
+            //{
+            //    CurrentHeldObject.GetComponent<Rigidbody>().MovePosition(hitInfo.point);
+            //    //movement code here , tell it to move to hitInfo.point
+            //}
+            //else
+            //{
+            //    CurrentHeldObject.GetComponent<Rigidbody>().MovePosition(target);
+            //    //tell it to move to target.position
+            //}
+
+            //Vector3 diff = CurrentHeldObject.position - fakeChild.transform.position;
+            //diff.Normalize();
+
+            //Rigidbody rb = CurrentHeldObject.GetComponent<Rigidbody>();
+            ////rb.AddForce(-diff*30);
+            ////CurrentHeldObject.GetComponent<Rigidbody>().MovePosition(transform.position - diff);
             CurrentHeldObject.GetComponent<Rigidbody>().MovePosition( fakeChild.transform.position);
             CurrentHeldObject.GetComponent<Rigidbody>().MoveRotation(fakeChild.transform.rotation);
             //CurrentHeldObject.transform.position = myCamera.transform.TransformPoint(transform.localPosition);
@@ -104,14 +124,14 @@ public class FlatScreenCharacterController : MonoBehaviour
                 fakeChild.transform.position = CurrentSlectedObject.transform.position;
                 fakeChild.transform.rotation = CurrentSlectedObject.transform.rotation;
                 CurrentHeldObject = CurrentSlectedObject;
-                CurrentHeldObject.GetComponent<Rigidbody>().useGravity = false;
+                CurrentHeldObject.GetComponent<Rigidbody>().isKinematic = true;
                 //offset = CurrentHeldObject.position - myCamera.transform.position;
             }
         }
     }
     void UnGrab()
     {
-        CurrentHeldObject.GetComponent<Rigidbody>().useGravity = true;
+        CurrentHeldObject.GetComponent<Rigidbody>().isKinematic = false;
         CurrentHeldObject = null;
     }
 
