@@ -8,6 +8,7 @@ public class PlatformManager : MonoBehaviour
     public static bool isVR = false;
     public GameObject VRController;
     public GameObject FlatScreenController;
+    public static GameObject player;
 
 
     void Start() 
@@ -15,11 +16,13 @@ public class PlatformManager : MonoBehaviour
         //Spawns the right controller
         if (isVR == true)
         {
-            Instantiate(VRController, Vector3.up, Quaternion.identity);
+            GameObject Player = Instantiate(VRController, Vector3.up, Quaternion.identity);
+            player = Player;
         }
         else
         {
-            Instantiate(FlatScreenController, Vector3.up, Quaternion.identity);
+            GameObject Player = Instantiate(FlatScreenController, Vector3.up, Quaternion.identity);
+            player = Player;
         }
     }
 }
