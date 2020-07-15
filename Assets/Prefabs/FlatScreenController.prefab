@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2525364583330088176}
   - component: {fileID: 2830591949660056223}
   - component: {fileID: 153483329745845391}
-  m_Layer: 2
+  m_Layer: 9
   m_Name: FlatScreenController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66,6 +66,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CC: {fileID: 2830591949660056223}
   speed: 6
+  gravity: -9.81
   myCamera: {fileID: 2718227813719502994}
   fakeChild: {fileID: 8896596790446090935}
 --- !u!1 &4039070614369254043
@@ -79,7 +80,7 @@ GameObject:
   - component: {fileID: 7283395472684656861}
   - component: {fileID: 3574954543072889085}
   - component: {fileID: 4027264267856820706}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -160,7 +161,7 @@ GameObject:
   - component: {fileID: 2718227813719502994}
   - component: {fileID: 7845207101404692921}
   - component: {fileID: 8260123403888092818}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -258,7 +259,7 @@ GameObject:
   - component: {fileID: 5724944980308410720}
   - component: {fileID: 5418865791473515476}
   - component: {fileID: 5572823742415504929}
-  m_Layer: 2
+  m_Layer: 9
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -333,7 +334,7 @@ GameObject:
   - component: {fileID: 3195944288003209756}
   - component: {fileID: 3361695537339794107}
   - component: {fileID: 4949617567575789092}
-  m_Layer: 2
+  m_Layer: 9
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -429,7 +430,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4536454991874437018}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FakeChild
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -18,11 +18,12 @@ public class FlatScreenCharacterController : MonoBehaviour
     void Update()
     {
         ///----------------------------player movement-----------------   https://youtu.be/_QajrabyTJc?t=889
-         //doesn't accelerate if the player is on the ground
+        //doesn't accelerate if the player is on the ground
         if (CC.isGrounded && velocityStore.y < 0)
         {
             velocityStore.y = -2; //makes sure the player stick to the ground just in case
         }
+
         //gets wasd input
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
@@ -45,7 +46,7 @@ public class FlatScreenCharacterController : MonoBehaviour
         Ray ray = myCamera.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
         int layer_mask = LayerMask.GetMask("CanInteract");
-        if (Physics.Raycast(ray, out hit, 1f, layer_mask))
+        if (Physics.Raycast(ray, out hit, 2f, layer_mask))
         {
             //draw invisible ray cast/vector
             Debug.DrawLine(ray.origin, hit.point);
@@ -94,8 +95,10 @@ public class FlatScreenCharacterController : MonoBehaviour
 
     void UnGrab()
     {
-        CurrentHeldObject.GetComponent<Rigidbody>().isKinematic = false; //re-enabled physics
-        CurrentHeldObject = null;
+        if (CurrentSlectedObject != null)
+        {
+            CurrentHeldObject.GetComponent<Rigidbody>().isKinematic = false; //re-enabled physics
+            CurrentHeldObject = null;
+        }
     }
-
 }

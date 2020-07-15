@@ -17,7 +17,7 @@ public class FlatScreenCameraController : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
     }
     
-    void Update()
+    void LateUpdate()
     {
         //calculates the angles
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
