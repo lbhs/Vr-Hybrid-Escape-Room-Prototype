@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class FlatScreenCharacterController : MonoBehaviour
 {
     public CharacterController CC;
@@ -55,6 +55,17 @@ public class FlatScreenCharacterController : MonoBehaviour
         else
         {
             CurrentSlectedObject = null;
+        }
+
+        // UI detection
+        int layer_mask2 = LayerMask.GetMask("UIButton");
+        if (Physics.Raycast(ray, out hit, 2f, layer_mask2))
+        {
+            Debug.DrawLine(ray.origin, hit.point);
+            if (Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                hit.transform.GetComponent<Button>().onClick.Invoke();
+            }
         }
 
         //Input detecting
