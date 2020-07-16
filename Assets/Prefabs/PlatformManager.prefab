@@ -47,3 +47,7 @@ MonoBehaviour:
     type: 3}
   FlatScreenController: {fileID: 1407846637093720036, guid: a2ccde7bf497d524da378177c2bc4891,
     type: 3}
+  FlatEventSystem: {fileID: 313060878627397075, guid: 7dbe7611888d276419e1318bb6dbfce0,
+    type: 3}
+  VREventSystem: {fileID: 8845953595727770510, guid: bd227a8357760dc4684f974ae3c6e9ca,
+    type: 3}
