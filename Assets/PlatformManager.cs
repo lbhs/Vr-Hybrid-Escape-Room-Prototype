@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlatformManager : MonoBehaviour
 {
     //determines what character controller to spawn
-    public static bool isVR = false;
+    public static bool isVR = true;
     //Different Controllers for different platforms
     public GameObject VRController;
     public GameObject FlatScreenController;
