@@ -6,6 +6,7 @@ public class FlatScreenCharacterController : MonoBehaviour
 {
     public CharacterController CC;
     public float speed = 6f;
+    public float objectRotateSpeed = 100;
     public float gravity = -9.81f;
     public Camera myCamera;
     [Header("A child of the camera")] //used to calculate the position of the held gameobject without parenting the held gameobject
@@ -84,6 +85,9 @@ public class FlatScreenCharacterController : MonoBehaviour
             //OVRGrabbable is the vr script, but I'm using it here to detect weather is a clickable object or a grabbable object
             if (CurrentHeldObject.GetComponent<OVRGrabbable>() != null)
             {
+                //fakeChild.transform.Rotate(new Vector3(-Input.GetAxisRaw("Vertical2"), 0,-Input.GetAxisRaw("Horosontial2"))*objectRotateSpeed*Time.deltaTime);
+                fakeChild.transform.RotateAround(fakeChild.transform.position,transform.up, Input.GetAxis("Horosontial2") *objectRotateSpeed * Time.deltaTime);
+                fakeChild.transform.RotateAround(fakeChild.transform.position, transform.right, Input.GetAxis("Vertical2") * objectRotateSpeed * Time.deltaTime);
                 CurrentHeldObject.GetComponent<Rigidbody>().MovePosition(fakeChild.transform.position);
                 CurrentHeldObject.GetComponent<Rigidbody>().MoveRotation(fakeChild.transform.rotation);
             }

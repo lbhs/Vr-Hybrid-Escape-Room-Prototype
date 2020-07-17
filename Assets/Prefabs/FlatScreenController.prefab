@@ -66,6 +66,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CC: {fileID: 2830591949660056223}
   speed: 6
+  objectRotateSpeed: 100
   gravity: -9.81
   myCamera: {fileID: 2718227813719502994}
   fakeChild: {fileID: 8896596790446090935}
