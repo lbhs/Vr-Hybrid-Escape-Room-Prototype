@@ -86,7 +86,7 @@ public class FlatScreenCharacterController : MonoBehaviour
             if (CurrentHeldObject.GetComponent<OVRGrabbable>() != null)
             {
                 //fakeChild.transform.Rotate(new Vector3(-Input.GetAxisRaw("Vertical2"), 0,-Input.GetAxisRaw("Horosontial2"))*objectRotateSpeed*Time.deltaTime);
-                fakeChild.transform.RotateAround(fakeChild.transform.position,transform.up, Input.GetAxis("Horosontial2") *objectRotateSpeed * Time.deltaTime);
+                fakeChild.transform.RotateAround(fakeChild.transform.position,transform.up, -Input.GetAxis("Horosontial2") *objectRotateSpeed * Time.deltaTime);
                 fakeChild.transform.RotateAround(fakeChild.transform.position, transform.right, Input.GetAxis("Vertical2") * objectRotateSpeed * Time.deltaTime);
                 CurrentHeldObject.GetComponent<Rigidbody>().MovePosition(fakeChild.transform.position);
                 CurrentHeldObject.GetComponent<Rigidbody>().MoveRotation(fakeChild.transform.rotation);
@@ -110,9 +110,12 @@ public class FlatScreenCharacterController : MonoBehaviour
 
     void UnGrab()
     {
-        if (CurrentSlectedObject != null)
+        if (CurrentHeldObject != null)
         {
-            CurrentHeldObject.GetComponent<Rigidbody>().isKinematic = false; //re-enabled physics
+            if (CurrentHeldObject.GetComponent<Rigidbody>() != null)
+            {
+                CurrentHeldObject.GetComponent<Rigidbody>().isKinematic = false; //re-enabled physics
+            }
             CurrentHeldObject = null;
         }
     }

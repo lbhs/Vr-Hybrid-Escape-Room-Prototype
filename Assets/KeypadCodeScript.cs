@@ -16,7 +16,7 @@ public class KeypadCodeScript : MonoBehaviour
 
     public void AddNum(int num)
     {
-        if (maxChars >= Displaytext.text.Length)
+        if (maxChars-1 >= Displaytext.text.Length)
         {
             Displaytext.text = Displaytext.text + num.ToString();
         }
