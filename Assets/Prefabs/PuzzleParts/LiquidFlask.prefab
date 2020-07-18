@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 6569808944943756201}
   - component: {fileID: 581016055171092304}
   - component: {fileID: 1165580227826924425}
-  - component: {fileID: 1165580227826924427}
   - component: {fileID: 1165580227826924424}
   - component: {fileID: 1165580227826924426}
+  - component: {fileID: 6789622658774071312}
   m_Layer: 8
   m_Name: LiquidFlask
   m_TagString: Untagged
@@ -100,23 +100,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 2534964839176971238, guid: b6e89be34177dba4aa21bc449359c545, type: 3}
---- !u!114 &1165580227826924427
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1165580227826924428}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_allowOffhandGrab: 1
-  m_snapPosition: 0
-  m_snapOrientation: 0
-  m_snapOffset: {fileID: 0}
-  m_grabPoints: []
 --- !u!114 &1165580227826924424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,6 +132,18 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &6789622658774071312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1165580227826924428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94a6e3f4a89505b4bb5f6f3a284cdb06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1606471639989262948
 GameObject:
   m_ObjectHideFlags: 0
