@@ -130,7 +130,9 @@ public class OvrAvatar : MonoBehaviour
     private UInt64 clothingAlphaTexture = 0;
 
     // Lipsync
+#if !UNITY_WEBGL
     private OVRLipSyncMicInput micInput = null;
+#endif
     private OVRLipSyncContext lipsyncContext = null;
     private OVRLipSync.Frame currentFrame = new OVRLipSync.Frame();
     private float[] visemes = new float[VISEME_COUNT];
@@ -1015,6 +1017,10 @@ public class OvrAvatar : MonoBehaviour
 
     bool IsValidMic()
     {
+#if UNITY_WEBGL
+        return false;
+#endif
+#if !UNITY_WEBGL
         string[] devices = Microphone.devices;
 
         if (devices.Length < 1)
@@ -1023,6 +1029,7 @@ public class OvrAvatar : MonoBehaviour
         }
 
         int selectedDeviceIndex = 0;
+#endif
 #if UNITY_STANDALONE_WIN
         for (int i = 1; i < devices.Length; i++)
         {
@@ -1033,7 +1040,7 @@ public class OvrAvatar : MonoBehaviour
             }
         }
 #endif
-
+#if !UNITY_WEBGL
         string selectedDevice = devices[selectedDeviceIndex];
 
         int minFreq;
@@ -1053,6 +1060,7 @@ public class OvrAvatar : MonoBehaviour
 
         Microphone.End(selectedDevice);
         return true;
+#endif
     }
 
     void InitPostLoad()
@@ -1067,10 +1075,12 @@ public class OvrAvatar : MonoBehaviour
             lipsyncContext.audioLoopback = false;
             if (CanOwnMicrophone && IsValidMic())
             {
+#if !UNITY_WEBGL
                 micInput = MouthAnchor.gameObject.AddComponent<OVRLipSyncMicInput>();
                 micInput.enableMicSelectionGUI = false;
                 micInput.MicFrequency = 44100;
                 micInput.micControl = OVRLipSyncMicInput.micActivation.ConstantSpeak;
+#endif
             }
 
             // Set lipsync animation parameters in SDK
@@ -1300,6 +1310,7 @@ public class OvrAvatar : MonoBehaviour
 
     public void UpdateVoiceData(short[] pcmData, int numChannels)
     {
+#if !UNITY_WEBGL
       if (lipsyncContext != null && micInput == null)
       {
           lipsyncContext.ProcessAudioSamplesRaw(pcmData, numChannels);
@@ -1311,11 +1322,13 @@ public class OvrAvatar : MonoBehaviour
       {
           lipsyncContext.ProcessAudioSamplesRaw(pcmData, numChannels);
       }
+#endif
     }
 
 
     private void UpdateFacewave()
     {
+#if !UNITY_WEBGL
         if (lipsyncContext != null && (micInput != null || CanOwnMicrophone == false))
         {
             // Get the current viseme frame
@@ -1340,5 +1353,6 @@ public class OvrAvatar : MonoBehaviour
             }
             CAPI.ovrAvatar_SetVisemes(sdkAvatar, RuntimeVisemes);
         }
+#endif
     }
 }
