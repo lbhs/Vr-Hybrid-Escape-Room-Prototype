@@ -22,6 +22,14 @@ public class KeypadCodeScript : MonoBehaviour
         }
     }
 
+    public void Backspace()
+    {
+        if(Displaytext.text != "")
+        {
+            Displaytext.text = Displaytext.text.Substring(0, Displaytext.text.Length - 1);
+        }
+    }
+
     public void Enter()
     {
         if (Displaytext.text == CorrectCode.ToString())

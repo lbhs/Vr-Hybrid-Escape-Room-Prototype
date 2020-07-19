@@ -1930,44 +1930,9 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3785705933385342280, guid: 2949dccaa3340364e93967ce3ce312a0,
         type: 3}
-      propertyPath: OnCorrectAnswer.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3785705933385342280, guid: 2949dccaa3340364e93967ce3ce312a0,
-        type: 3}
-      propertyPath: CorrectCode
-      value: 935674
-      objectReference: {fileID: 0}
-    - target: {fileID: 3785705933385342280, guid: 2949dccaa3340364e93967ce3ce312a0,
-        type: 3}
-      propertyPath: maxChars
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3785705933385342280, guid: 2949dccaa3340364e93967ce3ce312a0,
-        type: 3}
-      propertyPath: OnCorrectAnswer.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3785705933385342280, guid: 2949dccaa3340364e93967ce3ce312a0,
-        type: 3}
-      propertyPath: OnCorrectAnswer.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3785705933385342280, guid: 2949dccaa3340364e93967ce3ce312a0,
-        type: 3}
       propertyPath: OnCorrectAnswer.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 757197272}
-    - target: {fileID: 3785705933385342280, guid: 2949dccaa3340364e93967ce3ce312a0,
-        type: 3}
-      propertyPath: OnCorrectAnswer.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
-    - target: {fileID: 3785705933385342280, guid: 2949dccaa3340364e93967ce3ce312a0,
-        type: 3}
-      propertyPath: OnCorrectAnswer.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 3785705933385342286, guid: 2949dccaa3340364e93967ce3ce312a0,
         type: 3}
       propertyPath: m_Name
@@ -2077,16 +2042,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3785705933385342287, guid: 2949dccaa3340364e93967ce3ce312a0,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.0034470987
-      objectReference: {fileID: 0}
-    - target: {fileID: 3785705933385342287, guid: 2949dccaa3340364e93967ce3ce312a0,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.0034470987
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2949dccaa3340364e93967ce3ce312a0, type: 3}
