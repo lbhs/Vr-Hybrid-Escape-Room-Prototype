@@ -7,9 +7,18 @@ public class VRButtonInteraction : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.layer == 10) //10 is UIButton
+        if(other.gameObject.layer == 10 && canPush == true) //10 is UIButton
         {
+            StartCoroutine(Push());
             other.gameObject.GetComponent<Button>().onClick.Invoke();
         }
+    }
+
+    bool canPush = true;
+    IEnumerator Push()
+    {
+        canPush = false;
+        yield return new WaitForSecondsRealtime(0.1f);
+        canPush = true;
     }
 }

@@ -48,7 +48,10 @@ public class HandGrabber : MonoBehaviour
     {
         if(other.GetComponent<CanBeGrabed>() != null)
         {
-            objectHeld = other.gameObject;
+            if (objectHeld == null)
+            {
+                objectHeld = other.gameObject;
+            }
         }
     }
     private void OnTriggerExit(Collider other)
