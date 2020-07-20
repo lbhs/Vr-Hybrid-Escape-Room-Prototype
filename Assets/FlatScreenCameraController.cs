@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FlatScreenCameraController : MonoBehaviour
 {
-    public float mouseSensitivity = 100f;
+    public float mouseSensitivity = 1f;
 
     //The transform of the player so the entire player will rotate with the camera
     public Transform playerTransform;
@@ -20,8 +20,8 @@ public class FlatScreenCameraController : MonoBehaviour
     void LateUpdate()
     {
         //calculates the angles
-        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity;
+        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity;
         xRotation -= mouseY;
 
         //clamp rotation so it has limits
