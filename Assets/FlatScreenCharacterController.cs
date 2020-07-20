@@ -40,11 +40,12 @@ public class FlatScreenCharacterController : MonoBehaviour
         //Apply Gravity
         velocityStore.y += gravity * Time.deltaTime;
         CC.Move(velocityStore * Time.deltaTime);
-      
+
 
         ///-------------------picking up objects-------------------------
         //RayCast to detect what were looking at
-        Ray ray = myCamera.ScreenPointToRay(Input.mousePosition);
+        //old: Ray ray = myCamera.ScreenPointToRay(Input.mousePosition);
+        Ray ray = new Ray(myCamera.transform.position, myCamera.transform.forward);
         RaycastHit hit;
         int layer_mask = LayerMask.GetMask("CanInteract");
         if (Physics.Raycast(ray, out hit, 2f, layer_mask))

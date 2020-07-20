@@ -13,8 +13,7 @@ public class FlatScreenCameraController : MonoBehaviour
 
     void Start()
     {
-        //Hide/lock mouse in the center of the screen
-        Cursor.lockState = CursorLockMode.Locked;
+        
     }
     
     void LateUpdate()
