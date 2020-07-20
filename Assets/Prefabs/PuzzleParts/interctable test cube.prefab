@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7413056585305529276}
   - component: {fileID: 7413056585305529251}
   - component: {fileID: 7413056585305529250}
-  - component: {fileID: 5630762445598285420}
+  - component: {fileID: 8693914150148752003}
   m_Layer: 8
   m_Name: interctable test cube
   m_TagString: Untagged
@@ -111,7 +111,7 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 1
---- !u!114 &5630762445598285420
+--- !u!114 &8693914150148752003
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -120,6 +120,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 7413056585305529249}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94a6e3f4a89505b4bb5f6f3a284cdb06, type: 3}
+  m_Script: {fileID: 11500000, guid: c12a89822814622488a77240aa62a238, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

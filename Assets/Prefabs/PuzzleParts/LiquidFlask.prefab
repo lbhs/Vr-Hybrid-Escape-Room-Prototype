@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1165580227826924425}
   - component: {fileID: 1165580227826924424}
   - component: {fileID: 1165580227826924426}
-  - component: {fileID: 6789622658774071312}
+  - component: {fileID: 8461031615897614329}
   m_Layer: 8
   m_Name: LiquidFlask
   m_TagString: Untagged
@@ -132,7 +132,7 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &6789622658774071312
+--- !u!114 &8461031615897614329
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1165580227826924428}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94a6e3f4a89505b4bb5f6f3a284cdb06, type: 3}
+  m_Script: {fileID: 11500000, guid: c12a89822814622488a77240aa62a238, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1606471639989262948
