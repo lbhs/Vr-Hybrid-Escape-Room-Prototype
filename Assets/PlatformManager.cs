@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class PlatformManager : MonoBehaviour
 {
     //determines what character controller to spawn
-    public static bool isVR = true;
+    public static bool isVR = false; //Change this to enable or disable VR
     //Different Controllers for different platforms
     public GameObject VRController;
     public GameObject FlatScreenController;
@@ -15,7 +15,7 @@ public class PlatformManager : MonoBehaviour
     //public GameObject VREventSystem;
     //universal reference to the player;
     public static GameObject player;
-    public static bool CountingDown = false;
+    public static bool CountingDown = true; 
     private float timerCount;
     public Text[] TimerTexts;
 
