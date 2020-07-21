@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class PlatformManager : MonoBehaviour
 {
     //determines what character controller to spawn
-    public static bool isVR = false;
+    public static bool isVR = true;
     //Different Controllers for different platforms
     public GameObject VRController;
     public GameObject FlatScreenController;
@@ -24,7 +24,7 @@ public class PlatformManager : MonoBehaviour
         //Spawns the right controller
         if (isVR == true)
         {
-            GameObject Player = Instantiate(VRController, Vector3.up, Quaternion.identity);
+            GameObject Player = Instantiate(VRController, Vector3.zero, Quaternion.identity);
             player = Player;
         }
         else

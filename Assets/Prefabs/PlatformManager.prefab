@@ -43,11 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68e94f9aaa84e2f4ab67cf915bc08469, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  VRController: {fileID: 294595257560313599, guid: 6f3d10eadf57e964586b3a758d8fd1a2,
+  VRController: {fileID: 1611361787474004, guid: c61e4de741d37461e85f25866d1ebd31,
     type: 3}
   FlatScreenController: {fileID: 1407846637093720036, guid: a2ccde7bf497d524da378177c2bc4891,
     type: 3}
-  FlatEventSystem: {fileID: 313060878627397075, guid: 7dbe7611888d276419e1318bb6dbfce0,
-    type: 3}
-  VREventSystem: {fileID: 8845953595727770510, guid: bd227a8357760dc4684f974ae3c6e9ca,
-    type: 3}
+  TimerTexts: []
