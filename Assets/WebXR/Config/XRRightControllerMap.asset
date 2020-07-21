@@ -23,3 +23,13 @@ MonoBehaviour:
     gamepadIsButton: 1
     unityInputName: GripRight
     unityInputIsButton: 0
+  - actionName: LeftVRJoystickH
+    gamepadId: 2
+    gamepadIsButton: 0
+    unityInputName: LeftVRJoystickH
+    unityInputIsButton: 0
+  - actionName: LeftVRJoystickV
+    gamepadId: 3
+    gamepadIsButton: 0
+    unityInputName: LeftVRJoystickV
+    unityInputIsButton: 0

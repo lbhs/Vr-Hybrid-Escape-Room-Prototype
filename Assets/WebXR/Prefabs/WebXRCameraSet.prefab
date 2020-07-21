@@ -956,9 +956,11 @@ GameObject:
   - component: {fileID: 4545079059221816}
   - component: {fileID: 81134526380146952}
   - component: {fileID: 114460520290580286}
+  - component: {fileID: 634958289440060597}
+  - component: {fileID: 8787975069544661457}
   m_Layer: 0
   m_Name: WebXRCameraSet
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1005,6 +1007,40 @@ MonoBehaviour:
   DefaultHeight: 1.2
   TrackingSpace: 1
   xrState: 1
+--- !u!114 &634958289440060597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1611361787474004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da018cf80cfe6be40bf41f652035ffbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CC: {fileID: 8787975069544661457}
+  speed: 6
+  gravity: 0
+  MainCamera: {fileID: 1854678450583440}
+--- !u!143 &8787975069544661457
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1611361787474004}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 2
+  m_Radius: 0.07
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1644691530447244
 GameObject:
   m_ObjectHideFlags: 0
@@ -1927,7 +1963,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1192270247483151633}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.02
@@ -1984,7 +2020,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2683098525154358759}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.02

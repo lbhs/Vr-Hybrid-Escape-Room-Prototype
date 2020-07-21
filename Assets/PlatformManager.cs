@@ -15,17 +15,18 @@ public class PlatformManager : MonoBehaviour
     //public GameObject VREventSystem;
     //universal reference to the player;
     public static GameObject player;
-    public static bool CountingDown = true;
+    public static bool CountingDown = false;
     private float timerCount;
     public Text[] TimerTexts;
 
-    void Start() 
+    void Awake() 
     {
         //Spawns the right controller
         if (isVR == true)
         {
             GameObject Player = Instantiate(VRController, Vector3.zero, Quaternion.identity);
             player = Player;
+            Player.name = "WebXRCameraSet";
         }
         else
         {
