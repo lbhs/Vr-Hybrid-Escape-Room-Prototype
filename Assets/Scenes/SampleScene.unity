@@ -2560,13 +2560,28 @@ GameObject:
   - component: {fileID: 6593111136547997376}
   - component: {fileID: 8391224113076797932}
   - component: {fileID: 4151246477124007300}
-  m_Layer: 0
+  - component: {fileID: 4858407086598648213}
+  m_Layer: 8
   m_Name: Cylinder
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &4858407086598648213
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4858407086598648212}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2534964839176971238, guid: 62edff98133e49f4d8b18a42b5b74b46, type: 3}
 --- !u!4 &4936825729809601411
 Transform:
   m_ObjectHideFlags: 0
@@ -2592,7 +2607,7 @@ Transform:
   m_GameObject: {fileID: 7869452258002779315}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.9, y: 0.9, z: 0.85}
+  m_LocalScale: {x: 0.9, y: 0.9, z: 0.5}
   m_Children: []
   m_Father: {fileID: 4936825729809601411}
   m_RootOrder: 1
@@ -2699,7 +2714,6 @@ GameObject:
   - component: {fileID: 5525426849832542755}
   - component: {fileID: 7758713006896493578}
   - component: {fileID: 2609842992304185592}
-  - component: {fileID: 7869452258002779316}
   m_Layer: 0
   m_Name: Liquid
   m_TagString: Untagged
@@ -2707,20 +2721,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!64 &7869452258002779316
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7869452258002779315}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -9216810965846887918, guid: 62edff98133e49f4d8b18a42b5b74b46, type: 3}
 --- !u!1 &8275497359033082256
 GameObject:
   m_ObjectHideFlags: 0
@@ -2730,10 +2730,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4936825729809601411}
-  - component: {fileID: 8275497359033082258}
+  - component: {fileID: 8275497359033082259}
   - component: {fileID: 8275497359033082257}
   - component: {fileID: 8275497359033082260}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: beaker
   m_TagString: Interactable
   m_Icon: {fileID: 0}
@@ -2756,8 +2756,8 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &8275497359033082258
-MeshCollider:
+--- !u!65 &8275497359033082259
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2766,10 +2766,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 2534964839176971238, guid: 62edff98133e49f4d8b18a42b5b74b46, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.025, y: 0.025, z: 0.001}
+  m_Center: {x: 0, y: 0, z: 0.03}
 --- !u!114 &8275497359033082260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2782,6 +2781,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5201f2e055e637d43acb1a4dacb43766, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waterPercent: 0
+  Liquid: {fileID: 5525426849832542755}
+  fullValue: 0.85
+  emptyValue: 0.03
+  fillRate: 0.001
+  drainRate: 0.001
 --- !u!33 &8391224113076797932
 MeshFilter:
   m_ObjectHideFlags: 0

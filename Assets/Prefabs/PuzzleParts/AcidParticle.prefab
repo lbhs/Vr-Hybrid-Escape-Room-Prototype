@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 1072369032427553535}
   - component: {fileID: 1072369032427553532}
   - component: {fileID: 6100968335938647505}
-  m_Layer: 8
-  m_Name: LiquidParticle
+  m_Layer: 0
+  m_Name: AcidParticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

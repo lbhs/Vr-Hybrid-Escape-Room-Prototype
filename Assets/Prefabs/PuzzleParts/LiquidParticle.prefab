@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1072369032427553535}
   - component: {fileID: 1072369032427553532}
   - component: {fileID: 6100968335938647505}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: LiquidParticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3737,7 +3737,7 @@ ParticleSystem:
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
-    collisionMessages: 0
+    collisionMessages: 1
     collidesWithDynamic: 1
     interiorCollisions: 0
   TriggerModule:

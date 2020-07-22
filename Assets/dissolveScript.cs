@@ -13,7 +13,10 @@ public class dissolveScript : MonoBehaviour
     }
     private void OnParticleCollision(GameObject other)
     {
-        transform.position -= new Vector3(0,interval,0);
+        if (other.name == "AcidParticle(Clone)")
+        {
+            transform.position -= new Vector3(0, interval, 0);
+        }
         //Color c = MR.material.color;
         //c.a -= interval;
         // MR.material.color = c;
