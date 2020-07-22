@@ -6,6 +6,7 @@ TagManager:
   tags:
   - LHand
   - RHand
+  - Interactable
   layers:
   - Default
   - TransparentFX
