@@ -13,7 +13,8 @@ public class FlatScreenCameraController : MonoBehaviour
 
     void Start()
     {
-        
+        Cursor.lockState = CursorLockMode.Locked;
+        Screen.fullScreen = true;
     }
     
     void LateUpdate()
