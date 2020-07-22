@@ -83,7 +83,8 @@ public class FlatScreenCharacterController : MonoBehaviour
         //move the object if grabbed
         if(CurrentHeldObject != null)
         {
-            if (CurrentHeldObject.GetComponent<CanBeGrabed>() != null)
+            //if (CurrentHeldObject.GetComponent<CanBeGrabed>() != null)
+            if(CurrentHeldObject.tag == "Interactable")
             {
                 //fakeChild.transform.Rotate(new Vector3(-Input.GetAxisRaw("Vertical2"), 0,-Input.GetAxisRaw("Horosontial2"))*objectRotateSpeed*Time.deltaTime);
                 fakeChild.transform.RotateAround(fakeChild.transform.position,transform.up, -Input.GetAxis("Horosontial2") *objectRotateSpeed * Time.deltaTime);
@@ -98,7 +99,8 @@ public class FlatScreenCharacterController : MonoBehaviour
     {
         if (CurrentSlectedObject != null)
         {
-            if (CurrentSlectedObject.GetComponent<CanBeGrabed>() != null)
+            //if (CurrentSlectedObject.GetComponent<CanBeGrabed>() != null)
+            if (CurrentSlectedObject.tag == "Interactable")
             {
                 fakeChild.transform.position = CurrentSlectedObject.transform.position;
                 fakeChild.transform.rotation = CurrentSlectedObject.transform.rotation;
