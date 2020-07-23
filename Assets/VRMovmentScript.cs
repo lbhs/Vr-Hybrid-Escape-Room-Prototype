@@ -11,6 +11,7 @@ public class VRMovmentScript : MonoBehaviour  // TO-DO: add rotation from joysti
     public float gravity = -9.81f;
     public GameObject MainCamera;
     public Transform FakeCamera;
+    public WebXRController Left;
     void Start()
     {
         
@@ -24,8 +25,10 @@ public class VRMovmentScript : MonoBehaviour  // TO-DO: add rotation from joysti
         }
 
         //gets wasd input
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
+        //float x = Input.GetAxis("Horizontal");
+        //float z = Input.GetAxis("Vertical");
+        float x = Left.GetAxis("VRH");
+        float z = Left.GetAxis("VRV");
         //make a vector based on the rotation of the character
         FakeCamera.position = MainCamera.transform.position;
         FakeCamera.eulerAngles = new Vector3(0, MainCamera.transform.eulerAngles.y, 0);

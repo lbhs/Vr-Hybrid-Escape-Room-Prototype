@@ -1025,6 +1025,7 @@ MonoBehaviour:
   gravity: -9.81
   MainCamera: {fileID: 1854678450583440}
   FakeCamera: {fileID: 4585892638437414641}
+  Left: {fileID: 1211449985438865288}
 --- !u!143 &8787975069544661457
 CharacterController:
   m_ObjectHideFlags: 0
