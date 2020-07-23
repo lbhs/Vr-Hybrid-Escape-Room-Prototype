@@ -1,21 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class BeakerScript : MonoBehaviour //to-do: mix colors??
 {
+    [Header("")]
     [Range(0, 1)]
-    public float waterPercent;
+    public float waterPercent=0f;
     public Transform Liquid;
     public float fullValue=0.85f;
     public float emptyValue=0.03f;
     public float fillRate=0.001f;
     public float drainRate=0.001f;
-
+    [Header("")]
     public Transform[] EmitPoints;
     private Transform EmitPoint;
     public GameObject particle;
     public int pourThreshold = 45;
+    [Header("")]
+    public bool dynamicColor;
+    public float MixRate= 0.004f;
+    public Renderer liquidRenderer;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +36,16 @@ public class BeakerScript : MonoBehaviour //to-do: mix colors??
         else if(waterPercent >1)
         {
             waterPercent = 1;
+        }
+        if(waterPercent == 0)
+        {
+            Color c = liquidRenderer.material.color;
+            liquidRenderer.material.color = new Color(c.r,c.g,c.b,0);
+        }
+        else
+        {
+            Color c = liquidRenderer.material.color;
+            liquidRenderer.material.color = new Color(c.r, c.g, c.b, 1);
         }
         //find the lowest emit point
         foreach (var item in EmitPoints)
@@ -58,8 +72,13 @@ public class BeakerScript : MonoBehaviour //to-do: mix colors??
         {
             if (waterPercent > 0 && waterPercent <= 1)
             {
-                Instantiate(particle, EmitPoint.position, EmitPoint.rotation);
+                GameObject liquidParticle = Instantiate(particle, EmitPoint.position, EmitPoint.rotation);
                 waterPercent = waterPercent - fillRate;
+                if (dynamicColor)
+                {
+                    liquidParticle.GetComponent<ParticleSystemRenderer>().material.color = liquidRenderer.material.color;
+                    //liquidParticle.GetComponent<ParticleSystemRenderer>().trailMaterial.color = liquidRenderer.material.color;
+                }
             }
         }
         else
@@ -74,6 +93,12 @@ public class BeakerScript : MonoBehaviour //to-do: mix colors??
         {
             waterPercent = waterPercent + fillRate;
             //addColor
+            if (dynamicColor)
+            {
+                Color currentCol = liquidRenderer.material.color;
+                Color ParticleCol = other.GetComponent<ParticleSystemRenderer>().material.color;
+                liquidRenderer.material.color = Color.Lerp(currentCol, ParticleCol, MixRate);
+            }
         }
     }
 

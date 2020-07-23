@@ -18,7 +18,7 @@ public class PlatformManager : MonoBehaviour
     public static bool CountingDown = true; 
     private float timerCount;
     public Text[] TimerTexts;
-
+    
     void Awake() 
     {
         //Spawns the right controller

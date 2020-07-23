@@ -2136,6 +2136,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a6a79fcee69cb54f9c6f4cc801d57e4, type: 3}
+--- !u!23 &1733451553 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 416384634342983246, guid: 2cec1edc34a4168458064ab1bdb59e51,
+    type: 3}
+  m_PrefabInstance: {fileID: 4349205325604238282}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1774482002
 GameObject:
   m_ObjectHideFlags: 0
@@ -2328,6 +2334,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: beaker
+      objectReference: {fileID: 0}
+    - target: {fileID: 5657367979255992926, guid: 2cec1edc34a4168458064ab1bdb59e51,
+        type: 3}
+      propertyPath: R
+      value: 
+      objectReference: {fileID: 1733451553}
+    - target: {fileID: 5657367979255992926, guid: 2cec1edc34a4168458064ab1bdb59e51,
+        type: 3}
+      propertyPath: dynamicColor
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8707810944676257865, guid: 2cec1edc34a4168458064ab1bdb59e51,
         type: 3}

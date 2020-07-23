@@ -192,7 +192,7 @@ GameObject:
   - component: {fileID: 5657367979255992921}
   - component: {fileID: 5657367979255992923}
   - component: {fileID: 5657367979255992926}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: beaker
   m_TagString: Interactable
   m_Icon: {fileID: 0}
@@ -282,6 +282,9 @@ MonoBehaviour:
   particle: {fileID: 1072369032427553530, guid: 4b786df4dc3ebf14cad376879d427af5,
     type: 3}
   pourThreshold: 45
+  dynamicColor: 0
+  MixRate: 0.004
+  liquidRenderer: {fileID: 1757386186377515826}
 --- !u!1 &5867787967174938489
 GameObject:
   m_ObjectHideFlags: 0
