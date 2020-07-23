@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using WebXR;
 
-public class VRMovmentScript : MonoBehaviour  // TO-DO: add rotation from joystick and collision
+public class VRMovmentScript : MonoBehaviour  // TO-DO: add rotation from joystick
 {
     public CharacterController CC;
     private Vector3 velocityStore; //velocity from the last frame
