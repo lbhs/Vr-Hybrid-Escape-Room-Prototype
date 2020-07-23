@@ -10,6 +10,7 @@ public class VRMovmentScript : MonoBehaviour  // TO-DO: add rotation from joysti
     public float speed = 6f;
     public float gravity = -9.81f;
     public GameObject MainCamera;
+    public Transform FakeCamera;
     void Start()
     {
         
@@ -26,11 +27,13 @@ public class VRMovmentScript : MonoBehaviour  // TO-DO: add rotation from joysti
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
         //make a vector based on the rotation of the character
-        Vector3 move = MainCamera.transform.right * x + MainCamera.transform.forward * z;
+        FakeCamera.position = MainCamera.transform.position;
+        FakeCamera.eulerAngles = new Vector3(0, MainCamera.transform.eulerAngles.y, 0);
+        Vector3 move = FakeCamera.right * x + FakeCamera.forward * z;
 
         //Actually moves player
         CC.Move(move * speed * Time.deltaTime);
-
+      
 
 
         //Apply Gravity

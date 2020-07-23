@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BeakerScript : MonoBehaviour
+public class BeakerScript : MonoBehaviour //to-do: mix colors??
 {
     [Range(0, 1)]
     public float waterPercent;
@@ -57,8 +57,7 @@ public class BeakerScript : MonoBehaviour
         if (waterPercent <= 1 && waterPercent >= 0 )
         {
             waterPercent = waterPercent + fillRate;
-
-            //----------------------------------------------to-do: change color
+            //addColor
         }
     }
 

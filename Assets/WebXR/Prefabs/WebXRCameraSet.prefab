@@ -386,7 +386,7 @@ GameObject:
   - component: {fileID: 4357122362856218}
   - component: {fileID: 20930522213222284}
   - component: {fileID: 124058817231526930}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CameraL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -601,7 +601,7 @@ GameObject:
   - component: {fileID: 4172172842306312}
   - component: {fileID: 20572450475250664}
   - component: {fileID: 124875879843251026}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CameraR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -714,7 +714,7 @@ GameObject:
   - component: {fileID: 4414771795277364}
   - component: {fileID: 869084216986337281}
   - component: {fileID: 81178167226133646}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cameras
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -735,6 +735,7 @@ Transform:
   - {fileID: 4684771153913254}
   - {fileID: 4357122362856218}
   - {fileID: 4172172842306312}
+  - {fileID: 4585892638437414641}
   m_Father: {fileID: 4545079059221816}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -958,7 +959,7 @@ GameObject:
   - component: {fileID: 114460520290580286}
   - component: {fileID: 634958289440060597}
   - component: {fileID: 8787975069544661457}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WebXRCameraSet
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1023,6 +1024,7 @@ MonoBehaviour:
   speed: 6
   gravity: 0
   MainCamera: {fileID: 1854678450583440}
+  FakeCamera: {fileID: 4585892638437414641}
 --- !u!143 &8787975069544661457
 CharacterController:
   m_ObjectHideFlags: 0
@@ -1034,13 +1036,13 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 2
+  m_Height: 1
   m_Radius: 0.07
   m_SlopeLimit: 45
-  m_StepOffset: 0.3
+  m_StepOffset: 0
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: -0.17, z: 0}
 --- !u!1 &1644691530447244
 GameObject:
   m_ObjectHideFlags: 0
@@ -1494,7 +1496,7 @@ GameObject:
   - component: {fileID: 4684771153913254}
   - component: {fileID: 20092747195267750}
   - component: {fileID: 124984793849493392}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CameraMain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1540,7 +1542,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 1000
-  field of view: 80
+  field of view: 106
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -1911,6 +1913,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84ce7ab38d3cb40bfb531a81b9acac7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &169010733761229359
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4585892638437414641}
+  m_Layer: 9
+  m_Name: FakeCamera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4585892638437414641
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 169010733761229359}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4414771795277364}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1192270247483151633
 GameObject:
   m_ObjectHideFlags: 0
