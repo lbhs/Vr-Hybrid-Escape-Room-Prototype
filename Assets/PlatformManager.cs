@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class PlatformManager : MonoBehaviour
 {
     //determines what character controller to spawn
-    public static bool isVR = true; //Change this to enable or disable VR
+    public static bool isVR = false; //Change this to enable or disable VR
     //Different Controllers for different platforms
     public GameObject VRController;
     public GameObject FlatScreenController;
