@@ -27,8 +27,16 @@ public class VRMovmentScript : MonoBehaviour  // TO-DO: add rotation from joysti
         //gets wasd input
         //float x = Input.GetAxis("Horizontal");
         //float z = Input.GetAxis("Vertical");
+#if UNITY_EDITOR
         float x = Left.GetAxis("VRH");
         float z = Left.GetAxis("VRV");
+#elif UNITY_WEBGL
+        float x = Left.GetAxis("VRH");
+        float z = -Left.GetAxis("VRV");
+#else
+        float x = Left.GetAxis("VRH");
+        float z = Left.GetAxis("VRV");
+#endif
         //make a vector based on the rotation of the character
         //FakeCamera.position = MainCamera.transform.position;
         //FakeCamera.eulerAngles = new Vector3(0, MainCamera.transform.eulerAngles.y, 0);
