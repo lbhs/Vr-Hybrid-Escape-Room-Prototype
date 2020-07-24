@@ -12,4 +12,11 @@ public class StarGameScript : MonoBehaviour
         Screen.fullScreen = true;
         SceneManager.LoadScene(Sceneindex);
     }
+    private void Awake()
+    {
+        if (PlatformManager.isVR == true)
+        {
+            SceneManager.LoadScene(2);
+        }
+    }
 }

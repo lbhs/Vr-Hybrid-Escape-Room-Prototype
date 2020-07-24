@@ -1023,7 +1023,7 @@ MonoBehaviour:
   CC: {fileID: 8787975069544661457}
   speed: 6
   gravity: -9.81
-  MainCamera: {fileID: 1854678450583440}
+  MainCamera: {fileID: 1325129670532142}
   FakeCamera: {fileID: 4585892638437414641}
   Left: {fileID: 1211449985438865288}
 --- !u!143 &8787975069544661457
@@ -1923,6 +1923,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4585892638437414641}
+  - component: {fileID: 3261088131447923684}
   m_Layer: 9
   m_Name: FakeCamera
   m_TagString: Untagged
@@ -1944,6 +1945,19 @@ Transform:
   m_Father: {fileID: 4414771795277364}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3261088131447923684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 169010733761229359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ed99416739c9c84ba7a2c4a1fb3fc1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RealCamera: {fileID: 4684771153913254}
 --- !u!1 &1192270247483151633
 GameObject:
   m_ObjectHideFlags: 0

@@ -77,7 +77,10 @@ namespace WebXR
                         return Input.GetAxis(input.unityInputName);
                     }
 
-                    if (!input.gamepadIsButton) return axes[i];
+                    if (axes != null)
+                    {
+                        if (!input.gamepadIsButton) return axes[i];
+                    }
 
                     if (!buttonStates.ContainsKey(action))
                         return 0;

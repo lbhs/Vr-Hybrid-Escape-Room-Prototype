@@ -6,11 +6,11 @@ using UnityEngine.SceneManagement;
 public class StartGameUI : MonoBehaviour
 { public int VRScene=1;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        if(PlatformManager.isVR == true)
-        {
-            SceneManager.LoadScene(VRScene);
-        }
+        //if(platformmanager.isvr == true)
+        //{
+        //    scenemanager.loadscene(vrscene);
+        //}
     }
 }
