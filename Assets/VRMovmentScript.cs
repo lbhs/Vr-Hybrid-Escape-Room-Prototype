@@ -9,7 +9,7 @@ public class VRMovmentScript : MonoBehaviour  // TO-DO: add rotation from joysti
     private Vector3 velocityStore; //velocity from the last frame
     public float speed = 6f;
     public float gravity = -9.81f;
-    public GameObject MainCamera;
+    //public GameObject MainCamera;
     public Transform FakeCamera;
     public WebXRController Left;
     void Start()
