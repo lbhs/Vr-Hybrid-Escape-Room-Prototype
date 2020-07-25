@@ -17,9 +17,11 @@ public class BeakerScript : MonoBehaviour //to-do: mix colors??
     public GameObject particle;
     public int pourThreshold = 45;
     [Header("")]
-    public bool dynamicColor;
     public float MixRate= 0.004f;
     public Renderer liquidRenderer;
+    private Color CurrentLiquidColor;
+    private string CurrentLiquidName;
+    public float threshold = 0.2f;
     // Start is called before the first frame update
     void Start()
     {
@@ -74,11 +76,23 @@ public class BeakerScript : MonoBehaviour //to-do: mix colors??
             {
                 GameObject liquidParticle = Instantiate(particle, EmitPoint.position, EmitPoint.rotation);
                 waterPercent = waterPercent - fillRate;
-                if (dynamicColor)
+
+                //color stuff
+                //liquidParticle.GetComponent<ParticleSystemRenderer>().trailMaterial.color = liquidRenderer.material.color;
+                liquidParticle.GetComponent<ParticleSystemRenderer>().material.color = liquidRenderer.material.color;
+
+                CurrentLiquidColor = liquidRenderer.materials[0].color;
+                CurrentLiquidName = "MixedLiquid";
+                foreach (var item in flaskScript.ListOfLiquids)
                 {
-                    liquidParticle.GetComponent<ParticleSystemRenderer>().material.color = liquidRenderer.material.color;
-                    //liquidParticle.GetComponent<ParticleSystemRenderer>().trailMaterial.color = liquidRenderer.material.color;
+                        print(CurrentLiquidColor);
+                        print(item.color);
+                    if (ColorsAreClose(item.color, CurrentLiquidColor))
+                    {
+                        CurrentLiquidName = item.name;
+                    }
                 }
+                liquidParticle.name = CurrentLiquidName;
             }
         }
         else
@@ -92,9 +106,6 @@ public class BeakerScript : MonoBehaviour //to-do: mix colors??
         if (waterPercent <= 1 && waterPercent >= 0 )
         {
             waterPercent = waterPercent + fillRate;
-            //addColor
-            if (dynamicColor)
-            {
                 if (waterPercent <= 0.01)
                 {
                     liquidRenderer.material.color = other.GetComponent<ParticleSystemRenderer>().material.color;
@@ -105,12 +116,23 @@ public class BeakerScript : MonoBehaviour //to-do: mix colors??
                     Color ParticleCol = other.GetComponent<ParticleSystemRenderer>().material.color;
                     liquidRenderer.material.color = Color.Lerp(currentCol, ParticleCol, MixRate);
                 }
-            }
         }
     }
 
     float CaculatePourAngles()
     {
         return transform.forward.y * Mathf.Rad2Deg;
+    }
+
+    bool ColorsAreClose(Color a, Color z)
+    {
+        var rDist = Mathf.Abs(a.r - z.r);
+        var gDist = Mathf.Abs(a.g - z.g);
+        var bDist = Mathf.Abs(a.b - z.b);
+
+        if (rDist + gDist + bDist > threshold)
+            return false;
+
+        return true;
     }
 }

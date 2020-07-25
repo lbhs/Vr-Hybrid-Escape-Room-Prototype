@@ -193,7 +193,7 @@ GameObject:
   - component: {fileID: 5657367979255992923}
   - component: {fileID: 5657367979255992926}
   m_Layer: 11
-  m_Name: beaker
+  m_Name: EmptyBeaker
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -282,9 +282,9 @@ MonoBehaviour:
   particle: {fileID: 1072369032427553530, guid: 4b786df4dc3ebf14cad376879d427af5,
     type: 3}
   pourThreshold: 45
-  dynamicColor: 0
   MixRate: 0.004
   liquidRenderer: {fileID: 1757386186377515826}
+  threshold: 0.2
 --- !u!1 &5867787967174938489
 GameObject:
   m_ObjectHideFlags: 0
@@ -344,7 +344,6 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 5298f80eb3ddf9942bffa142eac3d720, type: 2}
-  - {fileID: 2100000, guid: f3f7f55f2a7125e4d9f3b28bf7f42bad, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
