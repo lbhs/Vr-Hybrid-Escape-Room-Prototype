@@ -95,9 +95,16 @@ public class BeakerScript : MonoBehaviour //to-do: mix colors??
             //addColor
             if (dynamicColor)
             {
-                Color currentCol = liquidRenderer.material.color;
-                Color ParticleCol = other.GetComponent<ParticleSystemRenderer>().material.color;
-                liquidRenderer.material.color = Color.Lerp(currentCol, ParticleCol, MixRate);
+                if (waterPercent <= 0.01)
+                {
+                    liquidRenderer.material.color = other.GetComponent<ParticleSystemRenderer>().material.color;
+                }
+                else
+                {
+                    Color currentCol = liquidRenderer.material.color;
+                    Color ParticleCol = other.GetComponent<ParticleSystemRenderer>().material.color;
+                    liquidRenderer.material.color = Color.Lerp(currentCol, ParticleCol, MixRate);
+                }
             }
         }
     }

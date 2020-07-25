@@ -50,7 +50,7 @@ public class FlatScreenCharacterController : MonoBehaviour
         //int layer_mask = LayerMask.GetMask("CanInteract");
         if (Physics.Raycast(ray, out hit, 2f))
         {
-            if (hit.transform.gameObject.layer == 8) //Layer #8 = CanInteract
+            if (hit.collider.gameObject.layer == 8) //Layer #8 = CanInteract
             {
                 //draw invisible ray cast/vector
                 Debug.DrawLine(ray.origin, hit.point);
