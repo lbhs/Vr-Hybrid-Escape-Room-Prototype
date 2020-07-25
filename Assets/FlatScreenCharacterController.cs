@@ -47,12 +47,15 @@ public class FlatScreenCharacterController : MonoBehaviour
         //old: Ray ray = myCamera.ScreenPointToRay(Input.mousePosition);
         Ray ray = new Ray(myCamera.transform.position, myCamera.transform.forward);
         RaycastHit hit;
-        int layer_mask = LayerMask.GetMask("CanInteract");
-        if (Physics.Raycast(ray, out hit, 2f, layer_mask))
+        //int layer_mask = LayerMask.GetMask("CanInteract");
+        if (Physics.Raycast(ray, out hit, 2f))
         {
-            //draw invisible ray cast/vector
-            Debug.DrawLine(ray.origin, hit.point);
-            CurrentSlectedObject = hit.transform;
+            if (hit.transform.gameObject.layer == 8) //Layer #8 = CanInteract
+            {
+                //draw invisible ray cast/vector
+                Debug.DrawLine(ray.origin, hit.point);
+                CurrentSlectedObject = hit.transform;
+            }
         }
         else
         {
