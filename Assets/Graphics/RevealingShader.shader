@@ -8,15 +8,17 @@
         _Metallic ("Metallic", Range(0,1)) = 0.0
 		_LightDirection("Light Direction",Vector) = (0,0,1,0)
 		_LightPosition("Light Position",Vector) = (0,0,0,0)
+		_LightAngle("Light Angle",Range(8,188)) = 15
+	    _StrengthScalar("Strength Scalar",float) = 50
     }
     SubShader
     {
-        Tags { "RenderType"="Opaque" }
+        Tags { "RenderType"="Transparent" "Queue" = "Transparent" }
         LOD 200
 
         CGPROGRAM
         // Physically based Standard lighting model, and enable shadows on all light types
-        #pragma surface surf Standard fullforwardshadows
+        #pragma surface surf Standard fullforwardshadows alpha:fade
 
         // Use shader model 3.0 target, to get nicer looking lighting
         #pragma target 3.0
@@ -34,6 +36,8 @@
         fixed4 _Color;
 		float4 _LightPosition;
 		float4 _LightDirection;
+		float _LightAngle;
+		float _StrengthScalar;
         // Add instancing support for this shader. You need to check 'Enable Instancing' on materials that use the shader.
         // See https://docs.unity3d.com/Manual/GPUInstancing.html for more information about instancing.
         // #pragma instancing_options assumeuniformscaling
@@ -44,15 +48,17 @@
         void surf (Input IN, inout SurfaceOutputStandard o)
         {
 			float3 direction = normalize(_LightPosition - IN.worldPos);
-			
-
+			float scale = dot(direction, _LightDirection);
+			float strength = scale - cos(_LightAngle * (3.24 / 360.0));
+			strength = min(max(strength* _StrengthScalar, 0),1);
             // Albedo comes from a texture tinted by color
-            //fixed4 c = tex2D (_MainTex, IN.uv_MainTex) * _Color;
-            o.Albedo = direction;
+            fixed4 c = tex2D (_MainTex, IN.uv_MainTex) * _Color;
+            o.Albedo = c.rgb;
+			o.Emission = c.rgb * c.a * strength * 10;
             // Metallic and smoothness come from slider variables
             o.Metallic = _Metallic;
             o.Smoothness = _Glossiness;
-            //o.Alpha = c.a;
+            o.Alpha = strength * c.a ;
         }
         ENDCG
     }
