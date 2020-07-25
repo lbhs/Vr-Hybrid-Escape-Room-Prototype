@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &5414225592642096265
+--- !u!1001 &4412037469098717228
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -9,28 +9,28 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1165580227826924424, guid: f9d6805734829cb4d8d008ea678ec06d,
         type: 3}
-      propertyPath: Liquidcolor.b
-      value: 0.7735849
-      objectReference: {fileID: 0}
-    - target: {fileID: 1165580227826924424, guid: f9d6805734829cb4d8d008ea678ec06d,
-        type: 3}
       propertyPath: LiquidName
-      value: WaterParticle
+      value: GreenParticle
       objectReference: {fileID: 0}
     - target: {fileID: 1165580227826924424, guid: f9d6805734829cb4d8d008ea678ec06d,
         type: 3}
       propertyPath: Liquidcolor.r
-      value: 0.19339623
+      value: 0.04233953
       objectReference: {fileID: 0}
     - target: {fileID: 1165580227826924424, guid: f9d6805734829cb4d8d008ea678ec06d,
         type: 3}
       propertyPath: Liquidcolor.g
-      value: 0.48492128
+      value: 0.5660378
+      objectReference: {fileID: 0}
+    - target: {fileID: 1165580227826924424, guid: f9d6805734829cb4d8d008ea678ec06d,
+        type: 3}
+      propertyPath: Liquidcolor.b
+      value: 0.03470988
       objectReference: {fileID: 0}
     - target: {fileID: 1165580227826924428, guid: f9d6805734829cb4d8d008ea678ec06d,
         type: 3}
       propertyPath: m_Name
-      value: WaterFlask
+      value: GreenFlask
       objectReference: {fileID: 0}
     - target: {fileID: 2771860920601758111, guid: f9d6805734829cb4d8d008ea678ec06d,
         type: 3}
