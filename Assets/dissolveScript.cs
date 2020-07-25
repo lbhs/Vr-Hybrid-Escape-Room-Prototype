@@ -13,7 +13,7 @@ public class dissolveScript : MonoBehaviour
     }
     private void OnParticleCollision(GameObject other)
     {
-        if (other.name == "AcidParticle(Clone)")
+        if (other.name == "AcidParticle")
         {
             transform.position -= new Vector3(0, interval, 0);
         }

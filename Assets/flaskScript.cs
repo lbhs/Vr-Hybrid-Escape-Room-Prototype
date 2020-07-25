@@ -7,10 +7,13 @@ public class flaskScript : MonoBehaviour
     public Transform EmitPoint;
     public GameObject particle;
     public int pourThreshold = 45;
+    public Color Liquidcolor;
+    public string LiquidName;
+    public Renderer FlaskRenderer;
     // Start is called before the first frame update
     void Start()
     {
-        
+        FlaskRenderer.materials[2].color = Liquidcolor;
     }
 
     // Update is called once per frame
@@ -18,7 +21,9 @@ public class flaskScript : MonoBehaviour
     {
         if (CaculatePourAngles() <= pourThreshold)
         {
-            Instantiate(particle, EmitPoint.position, EmitPoint.rotation);
+            GameObject GO = Instantiate(particle, EmitPoint.position, EmitPoint.rotation);
+            GO.name = LiquidName;
+            GO.GetComponent<ParticleSystemRenderer>().material.color = Liquidcolor;
         }
         else
         {

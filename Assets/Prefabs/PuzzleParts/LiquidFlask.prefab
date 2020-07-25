@@ -115,6 +115,9 @@ MonoBehaviour:
   particle: {fileID: 1072369032427553530, guid: 4b786df4dc3ebf14cad376879d427af5,
     type: 3}
   pourThreshold: 45
+  Liquidcolor: {r: 1, g: 1, b: 1, a: 1}
+  LiquidName: LiquidParticle
+  FlaskRenderer: {fileID: 581016055171092304}
 --- !u!54 &1165580227826924426
 Rigidbody:
   m_ObjectHideFlags: 0

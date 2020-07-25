@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/WelcomeScene.unity
     guid: 91477e9b7ad412745859d404769e6b77
   - enabled: 1
-    path: Assets/Scenes/VRWelcomeScene.unity
+    path: Assets/Scenes/(old)VRWelcomeScene.unity
     guid: d96a345f2de797e4ba23572cb3b6e449
   - enabled: 1
     path: Assets/Scenes/EscapeRoom.unity
