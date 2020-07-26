@@ -1302,8 +1302,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 18.171478, y: 1, z: 5.116292}
-  m_Center: {x: 8.585739, y: 0, z: 0.15354662}
+  m_Size: {x: 18.171478, y: 5.2150517, z: 5.116292}
+  m_Center: {x: 8.585739, y: -2.1075296, z: 0.15354653}
 --- !u!23 &653495321
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2721,8 +2721,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 18.171478, y: 1, z: 5.116292}
-  m_Center: {x: 8.585739, y: 0, z: 0.15354662}
+  m_Size: {x: 18.171478, y: 4.471394, z: 5.116292}
+  m_Center: {x: 8.585739, y: 1.7356985, z: 0.15354653}
 --- !u!23 &1371341711
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2889,13 +2889,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1534410150}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: -25, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 496369918}
   m_RootOrder: 22
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!65 &1534410152
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3143,7 +3143,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -3202,14 +3202,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1915852049}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -2.97, y: 1.48, z: -4.87}
+  m_LocalRotation: {x: -0.000095486685, y: 0.99624205, z: -0.08575384, w: 0.012171749}
+  m_LocalPosition: {x: -2.97, y: 0.59, z: -4.87}
   m_LocalScale: {x: 2, y: 1, z: 1}
   m_Children:
   - {fileID: 950666484}
   m_Father: {fileID: 0}
   m_RootOrder: 14
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 9.838, y: 178.589, z: -0.132}
 --- !u!65 &1915852054
 BoxCollider:
   m_ObjectHideFlags: 0
