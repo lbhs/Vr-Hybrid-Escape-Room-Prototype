@@ -31,4 +31,4 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _LightDirection: {r: -0.30962685, g: -0.17318037, b: -0.9349544, a: 0}
-    - _LightPosition: {r: -0.935, g: 1.166, b: 3.659, a: 0}
+    - _LightPosition: {r: -0.935, g: -74.59071, b: 3.659, a: 0}
