@@ -1,5 +1,5 @@
 # Escape-Room-Prototype
-A ptoyotpye for a unity escape room with desktop and vr support built in Unity 2019.3.13f1
+A prototype for a unity escape room with desktop and vr support built in Unity 2019.3.13f1
 
 WebGL : https://lbhs.github.io/Games/EscapeRoomPrototype/
 
